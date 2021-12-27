@@ -3,20 +3,22 @@
 import Foundation
 import PlaygroundSupport
 
-/// Returns a sequence from a starting value to, but not including, an end
-/// value, stepping by the specified amount.
-///
-/// - Parameters:
-///   - start: The starting value to use for the sequence. If the sequence
-///     contains any values, the first one is `start`.
-///   - end: An end value to limit the sequence. `end` is never an element of
-///     the resulting sequence.
-///   - stride: The amount to step by with each iteration. A positive `stride`
-///     iterates upward; a negative `stride` iterates downward.
-/// - Returns: A sequence from `start` toward, but not including, `end`. Each
-///   value in the sequence steps by `stride`.
-///
-///   @inlinable public func stride<T>(from start: T, to end: T, by stride: T.Stride) -> StrideTo<T> where T : Strideable
+/*
+ /// Returns a sequence from a starting value to, but not including, an end
+ /// value, stepping by the specified amount.
+ ///
+ /// - Parameters:
+ ///   - start: The starting value to use for the sequence. If the sequence
+ ///     contains any values, the first one is `start`.
+ ///   - end: An end value to limit the sequence. `end` is never an element of
+ ///     the resulting sequence.
+ ///   - stride: The amount to step by with each iteration. A positive `stride`
+ ///     iterates upward; a negative `stride` iterates downward.
+ /// - Returns: A sequence from `start` toward, but not including, `end`. Each
+ ///   value in the sequence steps by `stride`.
+ ///
+ ///   @inlinable public func stride<T>(from start: T, to end: T, by stride: T.Stride) -> StrideTo<T> where T : Strideable
+ */
 for tickMark in stride(from: 4, to: 10, by: 2){
     print(tickMark)
 }

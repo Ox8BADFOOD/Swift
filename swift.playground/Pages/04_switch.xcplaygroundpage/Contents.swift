@@ -2,7 +2,7 @@
 
 import Foundation
 
-// switch 也支持Character、String
+//: switch 也支持Character、String
 
 let str = "Jack"
 
@@ -23,7 +23,7 @@ default:
 }
 
 
-// switch 也支持区间、元祖
+//: switch 也支持区间、元祖
 let count = 60
 
 switch count {
@@ -40,7 +40,7 @@ default:
 }
 
 
-// 绑定值
+//: 绑定值
 let point = (2, 0)
 
 switch point {
@@ -53,7 +53,7 @@ case (let x,let y):
     print("somewhere else at (\(x),\(y)")
 }
 
-// where
+//: where
 let anchor = (1, -1)
 switch anchor{
 case (let x, let y) where x == y:
