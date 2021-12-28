@@ -9,5 +9,8 @@
         <page name='05_where'/>
         <page name='06_标签语句'/>
         <page name='07_函数'/>
+        <page name='08_enum枚举'/>
+        <page name='09_MemoryLayout'/>
+        <page name='备忘'/>
     </pages>
 </playground>
