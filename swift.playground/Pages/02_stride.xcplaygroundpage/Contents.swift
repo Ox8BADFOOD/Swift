@@ -19,11 +19,11 @@ import PlaygroundSupport
  ///
  ///   @inlinable public func stride<T>(from start: T, to end: T, by stride: T.Stride) -> StrideTo<T> where T : Strideable
  */
-for tickMark in stride(from: 4, to: 10, by: 2){
+for tickMark in stride(from: 4, to: 9, by: 2){
     print(tickMark)
 }
 
-for i in stride(from: 4, through: 10, by: 2){
+for i in stride(from: 4, through: 11, by: 2){
     print(i)
 }
 
