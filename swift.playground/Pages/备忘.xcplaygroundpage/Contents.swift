@@ -2,19 +2,24 @@
 
 import Foundation
 
+
+//问题：
+/*
+ iOS 老哥们 请教个问题
+ func ?? <T>(optional: T?, defaultValue: @autoclosure () throws -> T) rethrows -> T
+ @cappuccino  这个方法为什么可以这么写？
+ /// This operator uses short-circuit evaluation: `optional` is checked first,
+ /// and `defaultValue` is evaluated only if `optional` is `nil`. For example:
+ ///     func getDefault() -> Int {
+ ///         print("Calculating default...")
+ ///         return 42
+ ///     }
+ ///
+ ///     let goodNumber = Int("100") ?? getDefault()
+
+ ?? 是func 为什么第一个参数放在前面
+ 
+ */
+
 // swift里的String占16个字节，OC占8个字节
-// 
-
-//lea是“load effective address”的缩写
-
-
-// 内存分布顺序
-
-// 地址值可以补0
-
-// 代码段				0x100002320  1四个0很小
-// 数据段 (全局变量)	0x10000bad0	 1四个0较大
-// 堆				0x102908550  1不是四个0
-// 栈				0x7ffeefbff408	很大
-
 //: [Next](@next)

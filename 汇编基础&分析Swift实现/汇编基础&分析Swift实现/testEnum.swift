@@ -22,10 +22,3 @@ func testEnum(){
     print("hello")
 }
 
-
-class Size{
-	lazy var <#property name#>: <#type name#> = {
-		<#statements#>
-		return <#value#>
-	}()
-}

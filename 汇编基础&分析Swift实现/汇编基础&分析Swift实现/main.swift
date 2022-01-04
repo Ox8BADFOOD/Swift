@@ -12,6 +12,39 @@ enum PassWord{
     case gesture(String)
 }
 
+func 两个问号(){
+    let value1 : Int? = 10
+    let value2 : Int? = 10
+
+    _ = value1 ?? value2
+}
+
+func 创建闭包() -> ()->(){
+    var value = 10
+    // fn1就是闭包
+    let fn1 = {()->() in
+        value += 1
+    }
+    // 在这个位置下断点，rax的值就是swift_allocObject的函数返回值，也就是block捕获的对象的堆空间地址
+    
+    // 堆空间内存
+    // 前8个字节         间接调用fn1
+    // 8-16个字节       引用计数
+    // 16-24个字节      捕获的变量
+    //0x1093bcda0: 0x0000000100008308 0x0000000000000003
+    //0x1093bcdb0: 0x0000000000000010
+    return fn1
+}
+
+// 闭包占16个字节
+// var 闭包 内存前8位间接调用方法fn1；后8位存储闭包堆控件地址
+var 闭包 = 创建闭包()
+print(MemoryLayout.size(ofValue: 闭包))
+
+
+//testEnum()
+
+
 /*
  AT&T汇编特点
      寄存器前面加%,如 %rax
@@ -38,11 +71,7 @@ enum PassWord{
     跳转: jmp *(rdx) / jmp 0x4001002 / jmp *(%rax)
     调用: call ... ret
  
- mov 内存赋值
- 
  rip 作为指令指针
     存储着cpu下一条要执行的指令地址
     一旦cpu读取一条指令（读取肯定再运行前），rip会自动指向下一条指令（存储下一条指令的地址）
  */
-
-testEnum()

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='00_常见数据类型'/>
+        <page name='00.1AT&amp;T汇编'/>
+        <page name='00.2lldb指令'/>
+        <page name='00.常见数据类型'/>
         <page name='01_playground&amp;let&amp;var'/>
         <page name='02_stride'/>
         <page name='03_associatedtype'/>
@@ -16,5 +18,11 @@
         <page name='11.结构体&amp;枚举内存'/>
         <page name='12.指针'/>
         <page name='13.闭包'/>
+        <page name='14.存储苏醒、计算属性'/>
+        <page name='15.inout'/>
+        <page name='16.类型属性&amp;单例'/>
+        <page name='Data转UInt8'/>
+        <page name='17.mutating&amp;@discardableResult'/>
+        <page name='18.下标subscript'/>
     </pages>
 </playground>

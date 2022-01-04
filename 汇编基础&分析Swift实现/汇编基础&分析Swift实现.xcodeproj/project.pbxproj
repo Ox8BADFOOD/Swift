@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		50BC85C2277B75C40023DB35 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC85C1277B75C40023DB35 /* main.swift */; };
-		50BC85C9277B75ED0023DB35 /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC85C8277B75ED0023DB35 /* Mems.swift */; };
 		50BC85CB277B7E8E0023DB35 /* testEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC85CA277B7E8E0023DB35 /* testEnum.swift */; };
+		50C10C752783D23F00AC735F /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C10C742783D23F00AC735F /* Mems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,8 @@
 /* Begin PBXFileReference section */
 		50BC85BE277B75C40023DB35 /* 汇编基础&分析Swift实现 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "汇编基础&分析Swift实现"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BC85C1277B75C40023DB35 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		50BC85C8277B75ED0023DB35 /* Mems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mems.swift; path = "../../汇编基础/Mems.swift"; sourceTree = "<group>"; };
 		50BC85CA277B7E8E0023DB35 /* testEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testEnum.swift; sourceTree = "<group>"; };
+		50C10C742783D23F00AC735F /* Mems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +61,9 @@
 		50BC85C0277B75C40023DB35 /* 汇编基础&分析Swift实现 */ = {
 			isa = PBXGroup;
 			children = (
+				50C10C742783D23F00AC735F /* Mems.swift */,
 				50BC85C1277B75C40023DB35 /* main.swift */,
 				50BC85CA277B7E8E0023DB35 /* testEnum.swift */,
-				50BC85C8277B75ED0023DB35 /* Mems.swift */,
 			);
 			path = "汇编基础&分析Swift实现";
 			sourceTree = "<group>";
@@ -126,9 +126,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C10C752783D23F00AC735F /* Mems.swift in Sources */,
 				50BC85C2277B75C40023DB35 /* main.swift in Sources */,
 				50BC85CB277B7E8E0023DB35 /* testEnum.swift in Sources */,
-				50BC85C9277B75ED0023DB35 /* Mems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
