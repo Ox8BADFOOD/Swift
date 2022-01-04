@@ -12,5 +12,9 @@
         <page name='08_enum枚举'/>
         <page name='09_MemoryLayout'/>
         <page name='备忘'/>
+        <page name='10.对象内存'/>
+        <page name='11.结构体&amp;枚举内存'/>
+        <page name='12.指针'/>
+        <page name='13.闭包'/>
     </pages>
 </playground>
