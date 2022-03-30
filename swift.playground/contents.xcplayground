@@ -3,6 +3,8 @@
     <pages>
         <page name='00.1AT&amp;T汇编'/>
         <page name='00.2lldb指令'/>
+        <page name='00.3iOS内存布局'/>
+        <page name='00.4内存地址&amp;寄存器地址判断'/>
         <page name='00.常见数据类型'/>
         <page name='01_playground&amp;let&amp;var'/>
         <page name='02_stride'/>
@@ -24,5 +26,10 @@
         <page name='Data转UInt8'/>
         <page name='17.mutating&amp;@discardableResult'/>
         <page name='18.下标subscript'/>
+        <page name='19.继承'/>
+        <page name='20.字符串'/>
+        <page name='21.dyld_stub_binder'/>
+        <page name='Mach-O'/>
+        <page name='Untitled Page'/>
     </pages>
 </playground>

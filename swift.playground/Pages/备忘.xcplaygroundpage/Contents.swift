@@ -21,5 +21,26 @@ import Foundation
  
  */
 
+enum MyErr: Error{
+    case guYi(String)
+}
+
+/*
+ public func ?? <T>(optional: T?, defaultValue: @autoclosure () throws -> T) rethrows -> T
+ public func ?? <T>(optional: T?, defaultValue: @autoclosure () throws -> T?) rethrows -> T?
+ */
+
+func myLog <T> (body: T?, defaultValue: () throws -> T) rethrows -> T{
+    if let b = body{
+        return b
+    }
+    return try defaultValue()
+}
+
+
+print(
+    myLog(body: Int("hello"), defaultValue: { return 123 })
+)
+
 // swift里的String占16个字节，OC占8个字节
 //: [Next](@next)

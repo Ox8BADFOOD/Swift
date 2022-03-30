@@ -7,6 +7,11 @@
 
 import Foundation
 
+
+enum PassWord{
+    case number(Int, Int, Int, Int)
+    case gesture(String)
+}
 /*
  0x100003a16 <+22>:  movq   $0x2, 0x87af(%rip)        ;
  0x100003a21 <+33>:  movq   $0x4, 0x87ac(%rip)        ;

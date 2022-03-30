@@ -18,11 +18,11 @@ import Foundation
  
 #### 寄存器用途
 - 函数返回值
- - rax/rdx
+    - rax/rdx
 - 函数参数存放
- - rdi/rsi/rdx/rcx/r8/r9
+    - rdi/rsi/rdx/rcx/r8/r9
 - 堆栈
- - rbp/rsp
+    - rbp/rsp
 - rip 作为指令指针
     - 存储着cpu下一条要执行的指令地址
     - 一旦cpu读取一条指令（读取肯定再运行前），rip会自动指向下一条指令（存储下一条指令的地址）
@@ -47,7 +47,7 @@ import Foundation
     s = short(16bit integer,32bit float point)
     w = word(16bit)
     l = long(32bit integer,64bit float point)
-    q = quad(64bit)
+    q = quad(64bit) //quad 四方院子？
     t = ten byte(80bit float point)
  
 ## 简单例子：
@@ -56,24 +56,9 @@ import Foundation
     跳转:                 jmp *(rdx) / jmp 0x4001002 / jmp *(%rax)
     调用:                 call ... ret
 
-## AT&T规律:
 
-#### 内存分布顺序(从上到下)
- - 代码段
- - 数据段 (全局变量)
- - 堆
- - 栈
  
-#### 内存地址判断区间：
-- 代码段                 0x100002320  1四个0很小
-- 数据段 (全局变量)        0x10000bad0     1四个0较大
-- 堆                    0x102908550  1不是四个0
-- 栈                    0x7ffeefbff408    很大
- 
-#### 寄存器判断内存地址
- - 全局变量，全局区，数据段：  0x4bc(%rip)
- - 栈空间：                -0x78(%rbp)
- - 堆空间：                - 0x10(%rax)
+
  */
 
 //: [Next](@next)

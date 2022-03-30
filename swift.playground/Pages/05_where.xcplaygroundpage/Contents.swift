@@ -15,9 +15,19 @@ case (let x,let y):
 
 
 let numbers = [1,2,3,4,5]
+
+
+let dateStr:String? = "2022-01-12"
+let fmt = DateFormatter()
+fmt.dateFormat = "yyyy-MM-dd"
+let date = dateStr.flatMap(fmt.date)
+
+print(date?.description)
+
 var sum = 0
 for i in numbers where i <= 3{
     sum = sum + i
 }
 print(sum)
+
 //: [Next](@next)

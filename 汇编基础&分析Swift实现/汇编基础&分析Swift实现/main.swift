@@ -7,40 +7,58 @@
 
 import Foundation
 
-enum PassWord{
-    case number(Int, Int, Int, Int)
-    case gesture(String)
-}
 
-func 两个问号(){
-    let value1 : Int? = 10
-    let value2 : Int? = 10
-
-    _ = value1 ?? value2
-}
-
-func 创建闭包() -> ()->(){
-    var value = 10
-    // fn1就是闭包
-    let fn1 = {()->() in
-        value += 1
-    }
-    // 在这个位置下断点，rax的值就是swift_allocObject的函数返回值，也就是block捕获的对象的堆空间地址
+class Person{
+    let age: Int
     
-    // 堆空间内存
-    // 前8个字节         间接调用fn1
-    // 8-16个字节       引用计数
-    // 16-24个字节      捕获的变量
-    //0x1093bcda0: 0x0000000100008308 0x0000000000000003
-    //0x1093bcdb0: 0x0000000000000010
-    return fn1
+    init(age old: Int) {
+        age = old
+    }
 }
 
-// 闭包占16个字节
-// var 闭包 内存前8位间接调用方法fn1；后8位存储闭包堆控件地址
-var 闭包 = 创建闭包()
-print(MemoryLayout.size(ofValue: 闭包))
+// p就是初始化调用后，rax的值：0x000000010000c790,
+// 8个字节，指向堆空间Person对象，可以说p指向Person对象
+// p是全局变量
+var p = Person(age: 10)
+print(p)
 
+// &p 取p的地址
+// ptr的值就是变量p的内存地址；
+// 并且可以得出withUnsafePointer的第一个参数，作为参数传给了第二个参数（闭包）的参数
+var ptr = withUnsafePointer(to: &p) { $0 }
+
+print("p的内存地址:\(Mems.ptr(ofVal: &p))" )
+print("ptr的值:\(ptr)")
+
+print("堆空间的地址值：\(Mems.ptr(ofRef: p))")
+
+
+//print(Mems.memStr(ofVal: &a))
+//print(Mems.ptr(ofVal: &a))
+
+//var str2 = "0123456789ABCDEF"
+//print(Mems.memStr(ofVal: &str2))
+//print("1")
+//
+//class Person{
+//
+//    var fn :()->() = {
+//
+//    }
+//
+//    func run (){
+//        print("run")
+//    }
+//
+//    deinit {
+//        print("deinit")
+//    }
+//}
+
+//var p = Person()
+//p = nil
+
+//let (p, m) = getFns()
 
 //testEnum()
 
